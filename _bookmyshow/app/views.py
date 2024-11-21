@@ -7,4 +7,6 @@ from .models import Movie, CastMember  # Assuming you have these models in your 
 # Create your views here.
 def index(req):
     return render(req,'index.html')
-   
+
+def detail(req):
+    return render(req,'detail.html')

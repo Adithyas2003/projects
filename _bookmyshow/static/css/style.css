@@ -266,7 +266,7 @@ nav img{
 .section4 {
     width: 100%;
     height: auto;
-    background-color:rgb(52, 53, 54);
+    background-color:rgb(15, 17, 19);
     margin-top: 40px;
     font-family: "Nunito Sans", sans-serif;
   }
@@ -332,6 +332,7 @@ nav img{
     padding: 2px;
     color: white;
   }
+
   /* footer */
   .footer {
     background-color: #222;
