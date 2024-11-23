@@ -25,7 +25,7 @@ def e_shop_login(req):
             messages.warning(req, "invalid password")
             return redirect(e_shop_login)
     else:
-        return render(req,'login.html')
+        return render(req,'home.html')
 def home(request):
     return render(request, 'home.html')
 
