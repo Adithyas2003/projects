@@ -7,17 +7,74 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+<style>
+    /* Style for the header */
+
+
+
+    /* Adjust the height of the navbar */
+
+    .main-header {
+    background-color: #f0f0f0;  
+    color: #3d3d3d; 
+    text-align: left;  
+    display: flex;  
+    align-items: center;  
+    padding: 4px;
+}
+
+.main-header img {
+    width: 100px;  
+    height: 80px;
+    margin-right: 20px;  
+}
+
+.main-header h1 {
+    color: #2c3e50; 
+    font-size: 24px;
+    margin: 0; 
+}
+.sec33 {
+    display: flex;         /* Flex container */
+    flex-wrap: wrap;       /* Allow items to wrap to the next line */
+    justify-content: center;  /* Optional: center the images */
+    gap: 20px;             /* Adds space between the images */
+}
+
+.sec33c {
+    flex: 1 1 200px;      /* Each item can grow, shrink, and has a base size of 200px */
+    max-width: 200px;     /* Restrict the max width of each image container */
+}
+
+.sec33c img {
+    width: 100%;           
+    height: auto;        
+}
+.container-fluid {
+    display: flex;           
+    flex-direction: column;    
+    justify-content: center;   
+    align-items: center;       
+    text-align: center;        
+    height: 10vh;             
+}
+
+.container-fluid h1, .container-fluid p {
+    margin: 0;                 
+
+}
+
+</style>
 {% load static %}
 
 <body>
-    <div class="header d-flex ">
-        
+    <header class="main-header">
         <img src="{% static 'images/logo-search-grid-1x.png' %}" alt="Learning Logo" style="width: 100px; height: 80px;">
-        <h1>Start learning</h1>
-    </div>
+        <h1>start learning</h1>
+    </header>
     
 
-    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -45,24 +102,25 @@
         <!-- The slideshow/carousel -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{% static 'images/programming-software-development-web-page-260nw-1682028748.webp' %}" alt="Los Angeles" class="d-block" style="width:100%">
+                <img src="{% static 'images/programming-background-with-person-working-with-codes-computer_23-2150010125.avif' %}" alt="Los Angeles" class="d-block" style="width: 100%; height: 800px;">
                 <div class="carousel-caption">
-                    <h3>Los Angeles</h3>
-                    <p>We had such a great time in LA!</p>
+                    <h3>
+                        Gain skills, get certified</h3>
+                    <p>Looking to grow your career? With Udemy certification prep you can validate your skills in AWS, Azure, CompTIA, and more.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="{% static 'images/pngtree-computer-of-a-programmer-with-lines-code-of-software-image_15746003.png' %}" alt="Chicago" class="d-block" style="width:100%">
+                <img src="{% static 'images/pngtree-computer-of-a-programmer-with-lines-code-of-software-image_15746003.png' %}" alt="Chicago" class="d-block" style="width:100%;height: 800px;">
                 <div class="carousel-caption">
-                    <h3>Chicago</h3>
-                    <p>Thank you, Chicago!</p>
+                    <h3>Turn Black Friday into a brighter future</h3>
+                    <p>Transform your career during our biggest sale of the season. Courses from ₹399 until Nov 29.</p>
                 </div> 
             </div>
             <div class="carousel-item">
-                <img src="{% static 'images/programming-code-abstract-technology-background-of-software-developer-and-computer-script-3d-illustration-700-239478882.jpg' %}" alt="New York" class="d-block" style="width:100%">
+                <img src="{% static 'images/programming-code-abstract-technology-background-of-software-developer-and-computer-script-3d-illustration-700-239478882.jpg' %}" alt="New York" class="d-block" style="width:100%;height: 800px;">
                 <div class="carousel-caption">
-                    <h3>New York</h3>
-                    <p>We love the Big Apple!</p>
+                    <h3>Accelerate growth — for you or your organization</h3>
+                    <p>Reach goals faster with one of our plans or programs. Try one free today or contact sales to learn more.</p>
                 </div>  
             </div>
         </div>
@@ -77,18 +135,18 @@
     </div>
   
     <div class="container-fluid mt-3">
-        <h3>Carousel Example</h3>
-        <p>The following example shows how to create a basic carousel with indicators and controls.</p>
+        <h3>All the skills you need in one place</h3>
+        <p>From critical skills to technical topics, startlearning supports your professional development.</p>
     </div>
    
     <div class="sec32"></div>
     
     <div class="sec33">
-        <div class="sec33c"><img src="{% static 'images/liveevents1.avif' %}" alt=""></div>
-        <div class="sec33c"><img src="{% static 'images/liveevents2.avif' %}" alt=""></div>
-        <div class="sec33c"><img src="{% static 'images/liveevents3.avif' %}" alt=""></div>
-        <div class="sec33c"><img src="{% static 'images/liveevents4.avif' %}" alt=""></div>
-        <div class="sec33c"><img src="{% static 'images/liveevents5.avif' %}" alt=""></div>
+        <div class="sec33c"><img src="{% static 'images/images/iib-education.jpg' %}" alt=""></div>
+        <div class="sec33c"><img src="{% static 'images/nsdc.jpg' %}" alt=""></div>
+        <div class="sec33c"><img src="{% static 'images/logo.png' %}" alt=""></div>
+        <div class="sec33c"><img src="{% static 'images/people-cert.jpg' %}" alt=""></div>
+        <div class="sec33c"><img src="{% static 'images/skill-india.jpg' %}" alt=""></div>
     </div>
 </body>
 </html>
