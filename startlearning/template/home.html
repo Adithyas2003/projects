@@ -35,15 +35,15 @@
     margin: 0; 
 }
 .sec33 {
-    display: flex;         /* Flex container */
-    flex-wrap: wrap;       /* Allow items to wrap to the next line */
-    justify-content: center;  /* Optional: center the images */
-    gap: 20px;             /* Adds space between the images */
+    display: flex;         
+    flex-wrap: wrap;     
+    justify-content: center;  
+    gap: 20px;            
 }
 
 .sec33c {
-    flex: 1 1 200px;      /* Each item can grow, shrink, and has a base size of 200px */
-    max-width: 200px;     /* Restrict the max width of each image container */
+    flex: 1 1 200px;      
+    max-width: 200px;     
 }
 
 .sec33c img {
@@ -63,6 +63,291 @@
     margin: 0;                 
 
 }
+.trust-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-image: url('path-to-background-image.jpg'); /* Optional: Add background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+.trust-section h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #1445e6;
+    font-weight: 700;
+}
+
+/* Features Grid */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Feature Box */
+.feature-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Feature Icon */
+.feature-icon {
+    font-size: 40px;
+    color: #00bfff;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Feature Text */
+.feature-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #4819f1;
+}
+
+.feature-box p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Bottom Heading */
+.bottom-heading {
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #3d12d6;
+}
+
+
+.slider-images {
+    width: 90%; /* Adjust this value as needed */
+    max-width: 1200px; /* Maximum width */
+    overflow: hidden; /* Prevents overflow of the slides */
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Slides wrapper */
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Smooth transition */
+    animation: auto-slide 15s infinite; /* Auto slide with loop */
+}
+
+/* Individual slide */
+.blockslideimg {
+    min-width: 100%; /* Each slide will take up 100% of the container width */
+    flex-shrink: 0;
+    position: relative;
+}
+
+.blockslideimg img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure images fit nicely */
+    border-radius: 10px;
+}
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Card Container */
+.card-container {
+    position: relative;
+    width: 80%; /* Adjust width as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto; /* Center the container */
+    padding: 20px;
+}
+
+/* Card Slider (for scrolling images/cards) */
+.card-slider {
+    display: flex;
+    gap: 15px; /* Space between cards */
+    overflow-x: scroll; /* Horizontal scroll enabled */
+    scroll-snap-type: x mandatory; /* Enable scroll snapping */
+    scroll-behavior: smooth; /* Smooth scroll when using arrow keys or mouse wheel */
+}
+
+/* Each Card */
+.card {
+    flex-shrink: 0; /* Prevent card from shrinking */
+    width: 200px; /* Adjust card width */
+    height: 300px; /* Adjust card height */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+    overflow: hidden; /* Hide anything outside the card */
+}
+
+/* Image inside the card */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the card area */
+}
+
+/* Scroll buttons (left and right) */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
+.scroll-button.left {
+    left: 0;
+}
+
+.scroll-button.right {
+    right: 0;
+}
+
+.scroll-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Optional: Hide scrollbar for cleaner appearance */
+.card-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Scroll Snap Align */
+.card-slider .card {
+    scroll-snap-align: start; /* Align the cards to the left */
+}
+
+/* General reset */
+.footer {
+    background-color:rgb(233, 230, 224);
+    color: #333;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Container */
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Logo Section */
+.footer-logo {
+    max-width: 250px;
+    text-align: center;
+}
+.footer-logo img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+.footer-logo p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
+}
+.footer-logo .register-btn {
+    display: inline-block;
+    background-color: #ffb347;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex: 1;
+}
+
+.links-section {
+    max-width: 250px;
+}
+.links-section h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #000;
+}
+.links-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.links-section ul li {
+    margin-bottom: 10px;
+}
+.links-section ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+.links-section ul li a:hover {
+    color: #55514b;
+}
+
+/* Get in Touch */
+.links-section p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+.social-icons a {
+    margin-right: 10px;
+    color: #666;
+    text-decoration: none;
+    font-size: 18px;
+}
+.social-icons a:hover {
+    color: #ffb347;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+.footer-bottom a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.footer-bottom a:hover {
+    color: #ffb347;
+}
+
 
 </style>
 {% load static %}
@@ -78,13 +363,16 @@
         <div class="container-fluid">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link active" href="Home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact">contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="courses">courses</a>
                 </li>
             </ul>
         </div>
@@ -141,13 +429,158 @@
    
     <div class="sec32"></div>
     
-    <div class="sec33">
-        <div class="sec33c"><img src="{% static 'images/images/iib-education.jpg' %}" alt=""></div>
-        <div class="sec33c"><img src="{% static 'images/nsdc.jpg' %}" alt=""></div>
-        <div class="sec33c"><img src="{% static 'images/logo.png' %}" alt=""></div>
-        <div class="sec33c"><img src="{% static 'images/people-cert.jpg' %}" alt=""></div>
-        <div class="sec33c"><img src="{% static 'images/skill-india.jpg' %}" alt=""></div>
+    <section class="trust-section">
+        <div class="container">
+            <h1>Why trust startlearning ?</h1>
+            <div class="features">
+                
+                <div class="feature-box">
+                    <i class="fa fa-trophy feature-icon"></i>
+                    <h3>Offers Well Structured Courses</h3>
+                    <p>A top IT training institute offers well-structured courses that are relevant to the IT industry.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <i class="fa fa-hand-holding-usd feature-icon"></i>
+                    <h3>Reasonable Course Fees</h3>
+                    <p>Soften provides reasonable course fees to help every aspiring professional enroll for the course.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <i class="fa fa-tools feature-icon"></i>
+                    <h3>Includes Practical Training</h3>
+                    <p>Our teaching methodology emphasizes classroom learning to help students gain solid area-specific knowledge.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <i class="fa fa-headset feature-icon"></i>
+                    <h3>Provides Wide Ranging Support</h3>
+                    <p>We offer 24/7 online learning facilities including video content students can access anytime.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <i class="fa fa-users feature-icon"></i>
+                    <h3>Interact and Learn with Industry Experts</h3>
+                    <p>Get exposure to the latest IT training programs like Software, Networking, Embedded Systems, and more.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <i class="fa fa-bullseye feature-icon"></i>
+                    <h3>Provides Placement Assistance</h3>
+                    <p>Get 100% placement assistance.</p>
+                </div>
+            </div>
+            <h2 class="bottom-heading">100% Practical Training</h2>
+        </div>
+    </section>
+
+    <div class="card-container">
+        <button class="scroll-button left">&#10094;</button>
+        <div class="card-slider">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="{% static './images/download.jpeg' %}" alt="download" class="d-block">
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="{% static './images/download.png' %}" alt="download" class="d-block">
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="{% static './images/download (4).png' %}" alt="download" class="d-block">
+            </div>
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="{% static './images/download (1).png' %}" alt="download" class="d-block">
+            </div>
+            <div class="card">
+                <img src="{% static './images/download.jpeg' %}" alt="download" class="d-block">
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="{% static './images/download (1).jpeg' %}" alt="download" class="d-block">
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="{% static './images/download (4).png' %}" alt="download" class="d-block">
+            </div>
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="{% static './images/download (5).png' %}" alt="download" class="d-block">
+            </div>
+        </div>
+        <button class="scroll-button right">&#10095;</button>
     </div>
+    
+
+    <footer class="footer">
+        <div class="container">
+            <!-- Logo and Tagline -->
+            <div class="footer-logo">
+                <img src="{% static './images/logo-search-grid-1x.png' %}" alt="learning logo" class="logo" style="width: 100px;height: 80px;">
+                <p>Best Learning Platform<br>Study with the best certified professional teachers.</p>
+                <a href="#" class="register-btn">Register Now</a>
+            </div>
+    
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <!-- Quick Links -->
+                <div class="links-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Placements</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Company Policy</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Popular Courses -->
+                <div class="links-section">
+                    <h3>Popular Courses</h3>
+                    <ul>
+                        <li><a href="#">Advanced Diploma in Digital Marketing: AI Integrated</a></li>
+                        <li><a href="#">Full Stack Web Development: PHP</a></li>
+                        <li><a href="#">VMware vSphere</a></li>
+                        <li><a href="#">Cisco Certified Network Associate</a></li>
+                        <li><a href="#">CompTIA A+</a></li>
+                        <li><a href="#">Mobile App Development: Flutter</a></li>
+                        <li><a href="#">Master in DevOps</a></li>
+                        <li><a href="#">MERN Stack</a></li>
+                        <li><a href="#">UI/UX</a></li>
+                        <li><a href="#">Advanced Diploma in Cyber Security</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Get in Touch -->
+                <div class="links-section">
+                    <!-- <h3>Get in Touch</h3> -->
+                    <p>North paravoor ,ernakulam<br></p>
+                    <p>+91 67583993747<br>+91 6654345223</p>
+                    <p><a href="startlearning@gmail.com"></a>@startlearning.in</a></p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>Copyright © 2024 Synnefo Solutions. All rights reserved.</p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+        </div>
+    </footer>
+    
+    
 </body>
 </html>
 

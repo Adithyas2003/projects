@@ -35,3 +35,6 @@ def contact(request):
 
 def about(request):
     return render(request,'about.html')
+
+def courses(request):
+    return render(request,'courses.html')
