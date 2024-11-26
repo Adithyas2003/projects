@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>courses</title>
@@ -129,7 +130,7 @@
     </style>
 </head>
 <body>
-    {% load static %}
+    
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
             <ul class="navbar-nav">
@@ -148,18 +149,26 @@
             </ul>
         </div>
     </nav>
-<div class="container py-5">
-    <div class="row">
-           
-    <div class="col-md-5 mb-4 mb-md-0">
-        <img src="{{courses.img.url}}" class="product-image" alt="{{courses.name}}">
+    <div class="container py-5" style="margin-top: 25px;">
+        <div class="row g-4">
+          {% for i in courses %}
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <a href="" style="text-decoration: none;">
+              <div class="card h-100 shadow">
+                <img src="{{i.img.url}}" class="card-img-top" alt="{{pro.name}}" style="height: 300px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">{{i.name}}</h5>
+                  <h5 class="card-title">{{i.dis}}</h5>
+                  
+                </div>
+              </div>
+            </a>
+            
+          </div>
+          {% endfor %}
+        </div>
     </div>
-<div class="col-md-7">
-    <h2 class="courses-name">{{courses.name}}</h2>
-<div class="d-flex align-items-center">
-    <span class="dis">{{courses.dis}}</span>
-                   
-</div>
+
 
 <footer class="footer">
     <div class="container">

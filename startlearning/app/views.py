@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate,login
 from django.contrib import messages
+from .models import *
 
 # Create your views here.
 
@@ -37,4 +38,5 @@ def about(request):
     return render(request,'about.html')
 
 def courses(request):
-    return render(request,'courses.html')
+    data=Courses.objects.all()
+    return render(request,'courses.html',{'courses':data})
