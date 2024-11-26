@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -189,7 +190,7 @@
     </style>
 </head>
 <body>
-    {% load static %}
+    <!-- {% load static %} -->
     <body>
         <header class="main-header">
             <img src="{% static 'images/logo-search-grid-1x.png' %}" alt="Learning Logo" style="width: 100px; height: 80px;">
@@ -201,10 +202,10 @@
             <div class="container-fluid">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="About">Home</a>
+                        <a class="nav-link active" href="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Home">About</a>
+                        <a class="nav-link" href="about">about</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact">contact</a>

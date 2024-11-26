@@ -50,19 +50,20 @@
     width: 100%;           
     height: auto;        
 }
-.container-fluid {
+/* .container-fluid {
     display: flex;           
     flex-direction: column;    
     justify-content: center;   
     align-items: center;       
     text-align: center;        
     height: 10vh;             
-}
+} */
 
 .container-fluid h1, .container-fluid p {
     margin: 0;                 
+    align-items: center;
 
-}
+ } 
 .trust-section {
     text-align: center;
     padding: 60px 20px;
@@ -164,11 +165,11 @@
     border-radius: 10px;
 }
 /* General reset */
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 /* Card Container */
 .card-container {
@@ -242,7 +243,23 @@
 .card-slider .card {
     scroll-snap-align: start; /* Align the cards to the left */
 }
-
+.course-det {
+    position: relative;
+    width: 80%; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto; 
+    padding: 20px;
+}
+.course-det1 {
+    display: flex;
+    gap: 15px; /* Space between cards */
+    overflow-x: scroll;
+    /* scroll-snap-type: x mandatory;  */
+    /* scroll-behavior: smooth;  */
+}
 /* General reset */
 .footer {
     background-color:rgb(233, 230, 224);
@@ -364,10 +381,10 @@
         <div class="container-fluid">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="About">Home</a>
+                    <a class="nav-link active" href="home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Home">About</a>
+                    <a class="nav-link" href="about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact">contact</a>
@@ -375,10 +392,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="courses">courses</a>
                 </li>
+                
             </ul>
         </div>
     </nav>
-   
+
     <!-- Carousel -->
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
         <!-- Indicators/dots -->
@@ -422,11 +440,11 @@
             <span class="carousel-control-next-icon"></span>
         </button>
     </div>
-  
+<!--   
     <div class="container-fluid mt-3">
         <h3>All the skills you need in one place</h3>
         <p>From critical skills to technical topics, startlearning supports your professional development.</p>
-    </div>
+    </div> -->
    
     <div class="sec32"></div>
     
@@ -473,9 +491,40 @@
             </div>
             <h2 class="bottom-heading">100% Practical Training</h2>
         </div>
-    </section>
 
-    <div class="card-container">
+     <div class="course-det">
+        <button class="scroll-button left" aria-label="Scroll left">&#10094;</button>
+        <div class="course-det1">
+            
+            <div class="course">
+                <img src="{% static './images/Full-Stack-Developer.jpg' %}" alt="Image description 1" style="width: 300px;height: 200px;" class="d-block">
+                <h4>fullstack-developer</h4>
+
+            </div>
+            
+            <div class="course">
+                <img src="{% static './images/cisco.jpg' %}" alt="Image description 2" style="width: 300px;height: 200px;" class="d-block">
+                <h4>cisco</h4>
+            </div>
+            
+            <div class="course">
+                <img src="{% static './images/python-highlevel-programing-language-application-260nw-1402830182.webp' %}" alt="Image description 3" style="width: 300px;height: 200px;"class="d-block">
+                <h4>python</h4>
+            </div>
+            
+            <div class="course">
+                <img src="{% static './images/aws-for-beginners.jpg' %}" alt="Image description 4"style="width: 300px;height: 200px;" class="d-block">
+                <h4>AWS</h4>
+            </div>
+            
+            <div class="course">
+                <img src="{% static './images/python.jpg' %}" alt="Image description 5" style="width: 300px;height: 200px;" class="d-block">
+                <h4>Mernstack</h4>
+            </div> 
+
+    </section>
+    
+        <div class="card-container">
         <button class="scroll-button left">&#10094;</button>
         <div class="card-slider">
             <!-- Card 1 -->
@@ -512,8 +561,6 @@
         </div>
         <button class="scroll-button right">&#10095;</button>
     </div>
-    
-
     <footer class="footer">
         <div class="container">
             <!-- Logo and Tagline -->
