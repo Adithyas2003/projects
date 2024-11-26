@@ -7,4 +7,7 @@ urlpatterns = [
     path('contact/', views.contact),
     path('about/',views.about),
     path('courses/',views.courses),
+    path('course_dtl/<c_id>',views.details),
+
+   
 ]

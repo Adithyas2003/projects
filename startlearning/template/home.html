@@ -390,7 +390,7 @@
                     <a class="nav-link" href="contact">contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="courses">courses</a>
+                    <a class="nav-link" href="../courses">courses</a>
                 </li>
                 
             </ul>
@@ -492,35 +492,63 @@
             <h2 class="bottom-heading">100% Practical Training</h2>
         </div>
 
-     <div class="course-det">
-        <button class="scroll-button left" aria-label="Scroll left">&#10094;</button>
-        <div class="course-det1">
-            
-            <div class="course">
-                <img src="{% static './images/Full-Stack-Developer.jpg' %}" alt="Image description 1" style="width: 300px;height: 200px;" class="d-block">
-                <h4>fullstack-developer</h4>
-
+        <!-- <div class="course-det">
+            <button class="scroll-button left" aria-label="Scroll left">&#10094;</button>
+            <div class="course-det1">
+                <div class="course">
+                    <a href="" style="text-decoration: none;">
+                        <img src="{% static './images/Full-Stack-Developer.jpg' %}" alt="Full Stack Developer" style="width: 300px; height: 200px;" class="d-block">
+                        <h4>Fullstack Developer</h4>
+                    </a>
+                </div>
+                <div class="course">
+                    <a href="" style="text-decoration: none;">
+                        <img src="{% static './images/cisco.jpg' %}" alt="Cisco" style="width: 300px; height: 200px;" class="d-block">
+                        <h4>Cisco</h4>
+                    </a>
+                </div>
+                <div class="course">
+                    <a href="" style="text-decoration: none;">
+                        <img src="{% static './images/python-highlevel-programing-language-application-260nw-1402830182.webp' %}" alt="Python" style="width: 300px; height: 200px;" class="d-block">
+                        <h4>Python</h4>
+                    </a>
+                </div>
+                <div class="course">
+                    <a href="" style="text-decoration: none;">
+                        <img src="{% static './images/aws-for-beginners.jpg' %}" alt="AWS" style="width: 300px; height: 200px;" class="d-block">
+                        <h4>AWS</h4>
+                    </a>
+                </div>
+                <div class="course">
+                    <a href="" style="text-decoration: none;">
+                        <img src="{% static './images/python.jpg' %}" alt="MERN Stack" style="width: 300px; height: 200px;" class="d-block">
+                        <h4>MERN Stack</h4>
+                    </a>
+                </div>
             </div>
-            
-            <div class="course">
-                <img src="{% static './images/cisco.jpg' %}" alt="Image description 2" style="width: 300px;height: 200px;" class="d-block">
-                <h4>cisco</h4>
+        </div> -->
+        <section>
+            <div class="container py-5" style="margin-top: 25px;">
+                <div class="row g-4">
+                  {% for i in courses %}
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <a href="" style="text-decoration: none;">
+                      <div class="card h-100 shadow">
+                        <img src="{{i.img.url}}" class="card-img-top" alt="{{pro.name}}" style="height: 300px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                          <h5 class="card-title">{{i.name}}</h5>
+                          <h5 class="card-title">{{i.dis}}</h5>
+                          
+                        </div>
+                      </div>
+                    </a>
+                    
+                  </div>
+                  {% endfor %}
+                </div>
             </div>
-            
-            <div class="course">
-                <img src="{% static './images/python-highlevel-programing-language-application-260nw-1402830182.webp' %}" alt="Image description 3" style="width: 300px;height: 200px;"class="d-block">
-                <h4>python</h4>
-            </div>
-            
-            <div class="course">
-                <img src="{% static './images/aws-for-beginners.jpg' %}" alt="Image description 4"style="width: 300px;height: 200px;" class="d-block">
-                <h4>AWS</h4>
-            </div>
-            
-            <div class="course">
-                <img src="{% static './images/python.jpg' %}" alt="Image description 5" style="width: 300px;height: 200px;" class="d-block">
-                <h4>Mernstack</h4>
-            </div> 
+        </section>
+    
 
     </section>
     
