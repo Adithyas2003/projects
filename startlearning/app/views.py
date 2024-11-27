@@ -59,9 +59,5 @@ def courses(request):
     return render(request,'courses.html',{'courses':data})
 
 
-def details(req,cid):
-    if req.method=='POST':
-        name=req.POST['name']
-        dis=req.POST['dis']
-       
-        data=Contact.objects.create(name=name,dis=dis)
+def details(request):
+    return render(request, 'details.html') 
