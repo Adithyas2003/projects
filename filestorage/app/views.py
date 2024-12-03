@@ -18,5 +18,25 @@ def e_login(req):
             return redirect(e_login)
     else:
         return render(req,'login.html')
+def register(req):
+    if req.method=='POST':
+        username=req.POST['uname']
+        email=req.POST['email']
+        password=req.POST['pswd']
+        
+        
+        try:
+            data=User.objects.create_user(first_name=username,email=email,username=email,password=password)
+            data.save()
+        except:
+            messages.warning(req,"username already exist")
+            return redirect(register)
+        return redirect(e_login)
+    else:
+        return render(req,'register.html')
+    
+
+
+
 def home(req):
     return render(req,'home.html')
