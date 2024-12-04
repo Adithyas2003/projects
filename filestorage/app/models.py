@@ -6,4 +6,5 @@ class File(models.Model):
     name=models.CharField(max_length=255)
     file=models.FileField
     dis=models.TextField
+    
 

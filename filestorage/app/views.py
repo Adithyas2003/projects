@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from .models import *
 from django.contrib.auth.models import User
@@ -18,6 +18,10 @@ def e_login(req):
             return redirect(e_login)
     else:
         return render(req,'login.html')
+
+def e_logout(request):
+    logout(request)  
+    return redirect(e_login)
 def register(req):
     if req.method=='POST':
         username=req.POST['uname']

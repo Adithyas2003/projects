@@ -1,104 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    {%load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-      body {
-          margin: 0;
-          font-family: Arial, sans-serif;
-          background: linear-gradient(to bottom right, #1e0736, #041d42);
-          color: #fff;
-          text-align: center;
-      }
-      .container {
-          padding: 20px;
-      }
-      h1 {
-          margin-top: 50px;
-      }
-      .upload-box {
-          border: 2px dashed #f0c419;
-          border-radius: 10px;
-          margin: 50px auto;
-          padding: 50px;
-          max-width: 600px;
-          background: rgba(255, 255, 255, 0.1);
-          cursor: pointer;
-      }
-      .upload-box:hover {
-          background: rgba(255, 255, 255, 0.2);
-      }
-      .upload-box p {
-          margin: 0;
-      }
-      .features {
-          display: flex;
-          justify-content: center;
-          margin-top: 50px;
-      }
-      .feature {
-          margin: 0 15px;
-          text-align: center;
-      }
-      .feature img {
-          width: 50px;
-      }
+  {%load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: whitesmoke;
+      color: #fff;
+      text-align: center;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    h1 {
+      margin-top: 50px;
+    }
+
+    .upload-box {
+      border: 2px dashed #f0c419;
+      border-radius: 10px;
+      margin: 50px auto;
+      padding: 50px;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+    }
+
+    .upload-box:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .upload-box p {
+      margin: 0;
+    }
+
+    .features {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .feature {
+      margin: 0 15px;
+      text-align: center;
+    }
+
+    .feature img {
+      width: 50px;
+    }
+
+    .container1 {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+    
+      flex-wrap: wrap;
+      
+      justify-content: center;
+      
+      gap: 20px;
+    
+      text-align: center;
+      background-color: #ddd;
+    }
+
+
+    h1 {
+      color: #333;
+      text-align: center;
+
+
+    }
+
+    p {
+      color: #666;
+      text-align: center;
+      /* Center the text itself */
+      margin-bottom: 20px;
+      /* Add spacing below the heading */
+    }
+
+    .review {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      flex: 1 1 calc(33.333% - 40px);
+      /* Responsive width (3 cards per row) */
+      max-width: 400px;
+      /* Maximum card width */
+      text-align: left;
+      box-sizing: border-box;
+      /* Includes padding and border in width */
+    }
+
+    .review h3 {
+      margin: 0;
+      color: #333;
+    }
+
+    .review h4 {
+      margin: 10px 0;
+      color: #555;
+    }
+
+    .stars {
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+    
+    .container3 h5 {
+      color: #666;
+    }
+
+    .container4 {
+      margin-top: 40px;
+      color: #888;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+  footer {
+  background-color:white;
+  padding: 40px 20px;
+  padding-top: 60px; /* Space above the content */
+  border-top: 1px solid #b5b5b6;
+  margin-bottom: 30px;
+}
+
+footer .container5 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 40px; /* Space between content inside the footer */
+}
+
+
+footer h5 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #6c757d;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #333;
+}
+
+footer .row {
+  margin-bottom: 20px;
+}
+
+footer .text-center p {
+  color: #6c757d;
+  margin: 0;
+  font-size: 14px;
+}
+
+footer .text-center a {
+  text-decoration: none;
+  color: #6c757d;
+  margin-right: 15px;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+footer .text-center a:hover {
+  color: #333;
+}
+
+footer .social-icons img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.2);
+}
+  </style>
+
+
   </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <div class="container-fluid">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact">contact</a>
-            </li>
-           
-         
-          </ul>
-        </div>
-      </nav>
-     
-    
-</head>
-<body>
-    <div class="container">
-        <h1>Upload Files, Transfer Them Easily</h1>
-        <div class="upload-box" onclick="document.getElementById('file-input').click();">
-            <p>Click here or drop files to upload or transfer</p>
-            <p style="font-size: 0.9em; color: #ddd;">Max 50 files, 10 GB per file, total 100 GB</p>
-            <p style="font-size: 0.8em; color: #f0c419;">Upgrade to premium to upload files up to 20GB</p>
-            <input id="file-input" type="file" style="display: none;" multiple>
-        </div>
-        <div class="features">
-            <div class="feature">
-                
-                <img src="{% static 'img/icons8-upload-48.png' %}" alt="Speed Icon">
 
-                <p>Fast File Upload</p>
-            </div>
-            <div class="feature">
-              <img src="{% static 'img/lock.webp' %}" alt="Speed Icon">
-                <p>Effortless File Transfer</p>
-            </div>
-            <div class="feature">
-              <img src="{% static 'img/lock.webp' %}" alt="Speed Icon">
-                <p>Secure & Encrypted Uploads</p>
-            </div>
-        </div>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact">contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="logout">logout</a>
+        </li>
+
+
+      </ul>
     </div>
-</body>
-</html>
+  </nav>
 
-</body>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Upload Files, Transfer Them Easily</h1>
+      <div class="upload-box" onclick="document.getElementById('file-input').click();">
+        <p>Click here or drop files to upload or transfer</p>
+        <p style="font-size: 0.9em; color: #ddd;">Max 50 files, 10 GB per file, total 100 GB</p>
+        <p style="font-size: 0.8em; color: #f0c419;">Upgrade to premium to upload files up to 20GB</p>
+        <input id="file-input" type="file" style="display: none;" multiple>
+      </div>
+      <div class="features">
+        <div class="feature">
+
+          <img src="{% static 'img/icons8-upload-48.png' %}" alt="Speed Icon">
+
+          <p>Fast File Upload</p>
+        </div>
+        <div class="feature">
+          <img src="{% static 'img/reverse-logistic-logo-design-vector-260nw-2312582909.jpg' %}" alt="Speed Icon">
+          <p>Effortless File Transfer</p>
+        </div>
+        <div class="feature">
+          <img src="{% static 'img/lock.webp' %}" alt="Speed Icon">
+          <p>Secure & Encrypted Uploads</p>
+        </div>
+      </div>
+    </div>
+    <h1>Real Honest Reviews</h1>
+    <div class="container1">
+
+
+
+      <!-- Review 1 -->
+      <div class="review">
+        <h3>Heiko</h3>
+        <h4>After a long search probably the best choice</h4>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p>With pCloud I can directly select the folders to sync, which I personally find very good. The synchronization
+          works absolutely perfectly on multiple Macs and iPads. With the Lifetime Plan, I have made a clear one-time
+          investment, which is very convenient for me. Overall, I am absolutely satisfied with pCloud.</p>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review">
+        <h3>Malte Lukas</h3>
+        <h4>Finally, a cloud service that I am comfortable with!</h4>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p>Paying rent to someone else was never something that I preferred, so pCloud's option to purchase a lifetime
+          license was precisely what the doctor ordered. All in all, I like the simplicity and features of pCloud and
+          would definitely recommend it to anyone.</p>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review">
+        <h3>François Gouin</h3>
+        <h4>2 years on pCloud and would not change.</h4>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p>Cheap, efficient, and the customer service is really great and quick to answer. One lifetime fee and you have
+          one of the best cloud services on the market.</p>
+      </div>
+
+
+
+      <div class="container4">
+        &copy; 2024 pCloud Reviews. All rights reserved.
+      </div>
+    </div>
+    <div class="container3">
+      <h1>Own a business?</h1>
+      <h5>Bring your team together in filestorage Business and collaborate on all new project files</h5>
+    </div>
+    <footer>
+      <div class="container5">
+        <div class="row text-center text-md-start">
+          <!-- Column 1 -->
+          <div class="col-md-3 col-sm-6">
+            <h5>filestorage</h5>
+            <ul>
+              <li><a href="#">Download</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Encryption</a></li>
+              <li><a href="#">pCloud Pass</a></li>
+              <li><a href="#">Family</a></li>
+              <li><a href="#">Transfer</a></li>
+            </ul>
+          </div>
+          <!-- Column 2 -->
+          <div class="col-md-3 col-sm-6">
+            <h5>Features</h5>
+            <ul>
+              <li><a href="#">File Management</a></li>
+              <li><a href="#">Sharing</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">File Versioning</a></li>
+              <li><a href="#">Backup</a></li>
+              <li><a href="#">Digital Asset Management</a></li>
+            </ul>
+          </div>
+          <!-- Column 3 -->
+          <div class="col-md-3 col-sm-6">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Data Regions</a></li>
+              <li><a href="#">GDPR</a></li>
+              <li><a href="#">Press Center</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">The pCloud Blog</a></li>
+            </ul>
+          </div>
+          <!-- Column 4 -->
+          <div class="col-md-3 col-sm-6">
+            <h5>Help Center</h5>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Privacy Options</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Release Notes</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mt-4 text-center">
+          <div class="col-md-6">
+            <p>&copy; 2024 pCloud International AG. All rights reserved.</p>
+          </div>
+          <div class="col-md-6">
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Intellectual Property Policy</a>
+          </div>
+        </div>
+
+        <div class="row mt-4 text-center">
+          <div class="col-12 social-icons">
+            <h6>Follow Us</h6>
+            
+            <a href="#"><img src="{% static 'img/Twitter-Logo.wine.png' %}"></a>
+            <a href="#"><img src="{% static 'img/Instagram_logo_2016.svg.webp' %}"></a>
+            <a href="#"><img src="{% static 'img/432560.webp' %}"></a>
+            <a href="#"><img src="{% static 'img/3d-square-with-facebook-logo_901970-2.avif' %}"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+  </body>
+
 </html>
