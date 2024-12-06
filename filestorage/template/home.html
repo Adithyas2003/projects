@@ -85,9 +85,9 @@
     p {
       color: #666;
       text-align: center;
-      /* Center the text itself */
+      
       margin-bottom: 20px;
-      /* Add spacing below the heading */
+     
     }
 
     .review {
@@ -97,12 +97,12 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;
       flex: 1 1 calc(33.333% - 40px);
-      /* Responsive width (3 cards per row) */
+     
       max-width: 400px;
-      /* Maximum card width */
+      
       text-align: left;
       box-sizing: border-box;
-      /* Includes padding and border in width */
+      
     }
 
     .review h3 {
@@ -135,7 +135,7 @@
   footer {
   background-color:white;
   padding: 40px 20px;
-  padding-top: 60px; /* Space above the content */
+  padding-top: 60px;
   border-top: 1px solid #b5b5b6;
   margin-bottom: 30px;
 }
@@ -144,7 +144,7 @@ footer .container5 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  margin-top: 40px; /* Space between content inside the footer */
+  margin-top: 40px; 
 }
 
 
@@ -223,7 +223,7 @@ footer .social-icons img:hover {
           <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact">contact</a>
+          <a class="nav-link" href="contact">view_files</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="logout">logout</a>
@@ -307,6 +307,11 @@ footer .social-icons img:hover {
       <h1>Own a business?</h1>
       <h5>Bring your team together in filestorage Business and collaborate on all new project files</h5>
     </div>
+
+    <div class="container py-5">
+      <h1>Welcome to the File Storage Application</h1>
+      <p><a href="{% url 'file_view' %}" class="btn btn-primary">View All Files</a></p>
+  </div>
     <footer>
       <div class="container5">
         <div class="row text-center text-md-start">

@@ -1,8 +1,11 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
+from .forms import FileForm
+from .models import File
 from .models import *
 from django.contrib.auth.models import User
+import os
 # Create your views here.
 def e_login(req):
     if req.method=='POST':
@@ -40,6 +43,24 @@ def register(req):
         return render(req,'register.html')
     
 
+def file_upload(request):
+    if request.method == 'POST' and request.FILES.get('file'):
+        form = FileForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('file_list')  
+    else:
+        form = FileForm()
+    
+    return render(request, 'file_add.html', {'form': form})
+
+
+def file_list(request):
+    
+    files = File.objects.all()
+    
+    
+    return render(request, 'file_view.html', {'files': files})
 
 
 def home(req):
