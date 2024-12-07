@@ -7,6 +7,7 @@ urlpatterns=[
     path('logout',views.e_logout),
     path('file_view/', views.file_list, name='file_view'),
     path('file_add/', views.file_upload, name='file_add'),
+    path('delete_file/<int:file_id>/', views.delete_file, name='delete_file'),
    
    
 

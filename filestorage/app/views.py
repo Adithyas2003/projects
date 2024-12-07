@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,get_object_or_404,redirect
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from .forms import FileForm
@@ -61,6 +61,41 @@ def file_list(request):
     
     
     return render(request, 'file_view.html', {'files': files})
+
+
+
+def delete_file(request, file_id):
+    # Get the file object using its ID
+    file_to_delete = get_object_or_404(File, id=file_id)
+
+    # Optionally, delete the actual file from the filesystem
+    if file_to_delete.file:
+        file_path = file_to_delete.file.path
+        if os.path.exists(file_path):
+            os.remove(file_path)
+    
+    # If there's an associated image, delete it from the filesystem
+    if file_to_delete.image:
+        image_path = file_to_delete.image.path
+        if os.path.exists(image_path):
+            os.remove(image_path)
+    
+    # If there's an associated video, delete it from the filesystem
+    if file_to_delete.video:
+        video_path = file_to_delete.video.path
+        if os.path.exists(video_path):
+            os.remove(video_path)
+
+    # Delete the file record from the database
+    file_to_delete.delete()
+
+    # Add a success message
+    messages.success(request, "File deleted successfully.")
+
+    # Redirect to the file list page
+    return redirect('file_list')
+
+
 
 
 def home(req):
